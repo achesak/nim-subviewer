@@ -124,11 +124,15 @@ proc parseSubViewer*(subviewerData : string): SubViewerData =
             break
     
     return sv
+       
             
+proc parseSubViewer*(subviewerData : File): SubViewerData = 
+    ## Parses a file containing SubViewer data into a ``SubViewerData`` object.
+    
+    return parseSubViewer(readAll(subviewerData))
 
 
-var s : SubViewerData = parseSubViewer(readFile("example.sub"))   
-for r in s.subtitles:
-    echo(r.startTimeString)
-    echo(r.endTimeString)
-    echo(r.text)
+proc readSubViewer*(filename : string): SubViewerData = 
+    ## Reads and parses a file containing SubViewer data into a ``SubViewerData`` object.
+    
+    return parseSubViewer(readFile(filename))
