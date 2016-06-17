@@ -1,4 +1,5 @@
----- About ----
+About
+=====
 
 nim-subviewer is a Nim module for parsing SubViewer subtitle files.
 
@@ -24,8 +25,6 @@ and contains the following data::
     This is a second subtitle.[br]This is on a new line.
 
 Examples:
-
-.. code-block:: nimrod
     
     # Parse the data.
     var sub : SubViewerData = readSubViewer("example.sub")
@@ -54,6 +53,7 @@ Examples:
     echo(sub.size) # Output: "18"
     echo(sub.font) # Output: "Arial"
 
----- License ----
+License
+=======
 
 nim-subviewer is released under the MIT open source license.
