@@ -65,8 +65,7 @@ import sequtils
 
 
 type
-    SubViewerData* = ref SubViewerDataInternal
-    SubViewerDataInternal* = object
+    SubViewerData* = ref object
         title* : string
         author* : string
         source* : string
@@ -80,8 +79,7 @@ type
         font* : string
         subtitles* : seq[SubViewerSubtitle]
     
-    SubViewerSubtitle* = ref SubViewerSubtitleInternal
-    SubViewerSubtitleInternal* = object
+    SubViewerSubtitle* = ref object
         startTime* : TimeInterval
         endTime* : TimeInterval
         startTimeString* : string
