@@ -94,7 +94,6 @@ proc parseSubViewer*(subviewerData : string): SubViewerData =
                                            comment: "", program: "", color: "", style: "", size: "", font: "")
     var svl : seq[string] = subviewerData.replace("\r\n", "\n").replace("\r", "\n").split("\n")
     
-    var expectText : bool = false
     var expectInfo : bool = true
     for i in 0..high(svl):
         var row : string = svl[i]
