@@ -166,9 +166,9 @@ proc parseSubViewer*(subviewerData : string): SubViewerData =
                 var dSplit : seq[string] = r1.split(",")
                 st.startTimeString = dSplit[0]
                 st.endTimeString = dSplit[1]
-                st.startTime = initInterval(milliseconds = parseInt(st.startTimeString[9..10]) * 10, seconds = parseInt(st.startTimeString[6..7]),
+                st.startTime = initTimeInterval(milliseconds = parseInt(st.startTimeString[9..10]) * 10, seconds = parseInt(st.startTimeString[6..7]),
                                             minutes = parseInt(st.startTimeString[3..4]), hours = parseInt(st.startTimeString[0..1]))
-                st.endTime = initInterval(milliseconds = parseInt(st.endTimeString[9..10]) * 10, seconds = parseInt(st.endTimeString[6..7]),
+                st.endTime = initTimeInterval(milliseconds = parseInt(st.endTimeString[9..10]) * 10, seconds = parseInt(st.endTimeString[6..7]),
                                           minutes = parseInt(st.endTimeString[3..4]), hours = parseInt(st.endTimeString[0..1]))
                 st.text = r2.replace("[br]", "\n")
                 
